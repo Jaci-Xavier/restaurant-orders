@@ -18,10 +18,8 @@ class MenuData:
                     line['dish'], float(line['price']), line['ingredient'],
                     int(line['recipe_amount'])
                 )
-
                 if dish_name not in dishes:
                     dishes[dish_name] = Dish(dish_name, price)
-
                 dish = dishes[dish_name]
                 dish.add_ingredient_dependency(
                     Ingredient(ingredient_name), recipe_amount
